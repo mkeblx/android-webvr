@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>hello world</title>
+</head>
+<body>
+<h1>hello world</h1>
+<p>just a demo folks</p>
+
+<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+
+<div id="val"></div>
+
+<div id="sensor">sensor val</div>
+
+<script>
+var el = document.getElementById('val');
+el.innerHTML = navigator.userAgent + Navigator.answer();
+
+function showAndroidToast(toast) {
+   Android.showToast(toast);
+}
+
+var sEl = document.getElementById('sensor');
+sEl.innerHTML = 'new value';
+
+sEl.innerHTML = Navigator.getState();
+
+function getState() {
+    sEl.innerHTML = Navigator.getState();
+}
+
+setInterval(getState, 1000);
+</script>
+
+</body>
+</html>
